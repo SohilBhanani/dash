@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dash/util/fashion.dart';
+import 'package:dash/image_screen.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 bool favourite;
 class HomePage extends StatefulWidget {
@@ -12,6 +12,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
+  StorageReference photoReferance = FirebaseStorage.instance.ref().child("photos");
+
 
   @override
   void initState() {
@@ -117,51 +119,7 @@ class _HomePageState extends State<HomePage>
               children: <Widget>[
                 Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: GridView.builder(
-                        itemCount: fashion.length,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          childAspectRatio: 1,
-                          crossAxisSpacing: 5.0,
-                          mainAxisSpacing: 5.0,
-                        ),
-                        itemBuilder: (BuildContext context, int index){
-                          Map fas = fashion[index];
-                          return CircularItem(fas["img"]);
-                        }
-                        )
-//                  GridView.count(
-//                    crossAxisCount: 2,
-//                    crossAxisSpacing: 5.0,
-//                    mainAxisSpacing: 5.0,
-//                    children: <Widget>[
-//                      CircularItem("assets/fashion/f1.jpg"),
-//                      Container(
-//                        color: Colors.green,
-//                      ),
-//                      Container(
-//                        color: Colors.red,
-//                      ),
-//                      Container(
-//                        color: Colors.blue,
-//                      ),
-//                      Container(
-//                        color: Colors.green,
-//                      ),
-//                      Container(
-//                        color: Colors.red,
-//                      ),
-//                      Container(
-//                        color: Colors.blue,
-//                      ),
-//                      Container(
-//                        color: Colors.green,
-//                      ),
-//                      Container(
-//                        color: Colors.red,
-//                      ),
-//                    ],
-//                  ),
+                    child: ImagesScreen(),
                     ),
                 Container(
                   height: 150.0,
@@ -175,33 +133,12 @@ class _HomePageState extends State<HomePage>
 
       //Tabbar ends here
     );
+    
+    
   }
+  
 
-  Widget CircularItem(String imagePath) {
-    return Stack(
-      children: <Widget>[
-        Container(
-            decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          image:
-              DecorationImage(fit: BoxFit.cover, image: AssetImage(imagePath)),
-        )),
-        Align(
-          alignment: Alignment.bottomRight,
-          child: Container(
-            height: 40.0,
-            width: 40.0,
-            child: IconButton(
-              icon: Icon(
-                Icons.favorite,
-                size: 25.0,
-                color: favourite == true ? Colors.red : Colors.white,
-              ),
-              onPressed: () => favPress(),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
+
 }
+
+
