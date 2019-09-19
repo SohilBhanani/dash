@@ -60,11 +60,11 @@ class _HomePageState extends State<HomePage>
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 15.0),
                   child: Text(
                     "|",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -78,6 +78,8 @@ class _HomePageState extends State<HomePage>
                   child: TabBar(
                     controller: _tabController,
                     indicatorColor: Colors.transparent,
+                    unselectedLabelStyle: TextStyle(fontSize: 17.0,),
+                    labelStyle: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold),
                     unselectedLabelColor: Colors.black.withOpacity(0.4),
                     labelColor: Colors.black,
                     indicator: BoxDecoration(
@@ -89,9 +91,7 @@ class _HomePageState extends State<HomePage>
                           alignment: Alignment.centerRight,
                           child: Text(
                             "Popular",
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
+
                           ),
                         ),
                       ),
@@ -100,9 +100,7 @@ class _HomePageState extends State<HomePage>
                           alignment: Alignment.centerLeft,
                           child: Text(
                             "Categories",
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
+
                           ),
                         ),
                       ),
