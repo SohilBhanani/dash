@@ -3,6 +3,7 @@ import 'package:dash/util/fashion.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
 bool favourite;
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage>
         title: Center(
           child: Text(
             "Dash-Wall",
-            style: TextStyle(fontSize: 24.0, color: Colors.black),
+            style: TextStyle(fontSize: 24.0, color: Colors.black87),
           ),
         ),
       ),
@@ -124,11 +125,10 @@ class _HomePageState extends State<HomePage>
                           crossAxisSpacing: 5.0,
                           mainAxisSpacing: 5.0,
                         ),
-                        itemBuilder: (BuildContext context, int index){
+                        itemBuilder: (BuildContext context, int index) {
                           Map fas = fashion[index];
                           return CircularItem(fas["img"]);
-                        }
-                        )
+                        })
 //                  GridView.count(
 //                    crossAxisCount: 2,
 //                    crossAxisSpacing: 5.0,
