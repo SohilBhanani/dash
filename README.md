@@ -1,6 +1,6 @@
 # dash
 
-A new Flutter application.
+this is first wallpaper application in flutter.this application works with "Firebase".All wallpapers are fetch from fire base so we can update wallpapers online throw fire base so usr can get new wallpaper daily.
 
 ## Getting Started
 
