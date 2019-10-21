@@ -73,6 +73,31 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: assets/fonts/Pacifico-Regular.ttf
+    - family: Cinzel
+      fonts:
+        - asset: assets/fonts/Cinzel-Regular.ttf
+    - family: Lobster
+      fonts:
+        - asset: assets/fonts/Lobster-Regular.ttf
+    - family: Courgette
+      fonts:
+        - asset: assets/fonts/Courgette-Regular.ttf
+    - family: GreatVibes
+      fonts:
+        - asset: assets/fonts/GreatVibes-Regular.ttf
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-MediumItalic.ttf
+        - asset: assets/fonts/Raleway-Regular.ttf
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Black.ttf
+        - asset: assets/fonts/Nunito-Regular.ttf
+
   # fonts:
   #   - family: Schyler
   #     fonts:
