@@ -88,6 +88,7 @@ class _HomePageState extends State<HomePage>
                             "Popular",
                             style: TextStyle(
                               fontSize: 18.0,
+                              fontFamily: 'Cinzel'
                             ),
                           ),
                         ),
@@ -98,6 +99,7 @@ class _HomePageState extends State<HomePage>
                           child: Text(
                             "Categories",
                             style: TextStyle(
+                              fontFamily: 'Raleway',
                               fontSize: 18.0,
                             ),
                           ),
